@@ -1,13 +1,19 @@
-This README file contains information on the contents of the
-rtlabs layer.
+meta-rtlabs Yocto layer
+=======================
+This Yocto layer contains a recipe to build p-net.
 
-The p-net stack is a Profinet IO-device stack developed by rt-labs.
-For details see https://github.com/rtlabs-com/p-net
-It is dual licensed GPLv3 and commercial. If you need a commercial license,
-please contact sales@rt-labs.com
+The p-net stack is an open-source Profinet IO-device stack developed by
+rt-labs. It is dual licensed GPLv3 and commercial. If you need a commercial
+license, please contact sales@rt-labs.com
 
-This layer is tested with Yocto version 2.4 ("rocko"), but should work with other
-Yocto versions.
+* p-net: [https://github.com/rtlabs-com/p-net](https://github.com/rtlabs-com/p-net)
+* rt-labs: [https://rt-labs.com](https://rt-labs.com)
+
+
+Versions
+========
+This layer is tested with Yocto version 2.4 ("rocko"), but should work with
+other Yocto versions.
 
 For the p-net version, you might need to adjust the SRCREV value in the
 p-net.bb recipe. Look for the most recent stable release/tag
@@ -23,7 +29,6 @@ support Yocto 2.7 or later, that recipe will be removed.
 
 Dependencies
 ============
-
 This layer depends on:
 
   URI: git://git.openembedded.org/bitbake
@@ -36,7 +41,6 @@ This layer depends on:
 
 Adding the rtlabs layer to your build
 =====================================
-
 In order to use this layer, you need to make the build system aware of
 it.
 
@@ -51,3 +55,8 @@ other layers needed. e.g.:
     /path/to/yocto/meta-yocto-bsp \
     /path/to/yocto/meta-rtlabs \
     "
+
+In order to use the recipes, add this to your image:
+
+* *p-net* Adds libprofinet
+* *p-net-demo* Adds libprofinet and the sample app
