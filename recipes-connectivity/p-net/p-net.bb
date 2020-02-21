@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=4b23c301952201d50182a03961874938"
 SECTION = "console/network"
 
 SRC_URI = "git://github.com/rtlabs-com/p-net.git"
-SRCREV = "eb5547020a34674a15e7df1f5bc1b85e8345f8e8"
+SRCREV = "49a781c945ccb2018e75e58c91848a7c44a04763"
 
 DEPENDS = "cmake-zeus-native"
 DEPENDS_remove = "cmake-native"
