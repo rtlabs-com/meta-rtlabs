@@ -5,11 +5,6 @@ SECTION = "libs"
 PROVIDES = "p-net"
 
 SRC_URI = "file://p-net-sources-1.0.2.zip"
-
-# Require activation to use the official stack
-# since this requires available sources.
-DEFAULT_PREFERENCE = "-1"
-
 S = "${WORKDIR}/p-net"
 
 FILES:${PN}-dev += " \
