@@ -1,5 +1,6 @@
 SUMMARY = "P-Net Profinet communication stack"
-LICENSE = "LicenseRef-Proprietary"
+LICENSE = "LicenseRef-RT-Labs-Deployment-1.0"
+LICENSE_FLAGS = "commercial"
 LIC_FILES_CHKSUM = "file://CMakeLists.txt;beginline=1;endline=14;md5=aa7e6f963fad674b02c35dc8e9aa5519"
 SECTION = "libs"
 PROVIDES = "p-net"
