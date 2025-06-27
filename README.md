@@ -1,5 +1,6 @@
 meta-rtlabs Yocto layer
 =======================
+
 This Yocto layer contains a recipe to build p-net.
 
 The p-net stack is an open-source Profinet IO-device stack developed by
@@ -9,9 +10,9 @@ license, please contact sales@rt-labs.com
 * p-net: [https://github.com/rtlabs-com/p-net](https://github.com/rtlabs-com/p-net)
 * rt-labs: [https://rt-labs.com](https://rt-labs.com)
 
-
 Versions
-========
+--------
+
 This layer is tested with Yocto version 2.4 ("rocko"), but should work with
 other Yocto versions.
 
@@ -26,9 +27,9 @@ recent enough. Nowever this layer contains a recipe for updated cmake-native
 so it also can be used with older Yocto releases. In the future when we only
 support Yocto 2.7 or later, that recipe will be removed.
 
-
 Dependencies
-============
+------------
+
 This layer depends on:
 
   URI: git://git.openembedded.org/bitbake
@@ -38,9 +39,9 @@ This layer depends on:
   layers: meta
   branch: master
 
-
 Adding the rtlabs layer to your build
-=====================================
+-------------------------------------
+
 In order to use this layer, you need to make the build system aware of
 it.
 
@@ -58,5 +59,20 @@ other layers needed. e.g.:
 
 In order to use the recipes, add this to your image:
 
-* *p-net* Adds libprofinet
-* *p-net-demo* Adds libprofinet and the sample app
+* *p-net* Adds libpnet
+* *p-net-samples* Adds libpnet and the sample app
+
+Variants
+--------
+
+Two variants of the p-net recipe is added by this layer:
+
+* `Evaluation` (p-net-evaluation)
+* `Production` (p-net-production)
+
+The `Evaluation` version uses publicly available precompiled binaries for the library
+compiled in evaluation mode.
+
+The `Production` variant depends on a locally provided zip of the p-net sources. The
+source package can be placed in the `recipes-connectivity/p-net/files` folder, or
+a `bbappend` file can be used to provide the path to the source package.
